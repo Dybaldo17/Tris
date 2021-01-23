@@ -21,7 +21,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Giocatore 1: 0"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:freezesText="true"/>
 
             <Button
                 android:id="@+id/btnReset"
@@ -46,7 +47,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Giocatore 2: 0"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:freezesText="true"/>
         </TableRow>
 
         <TableRow
@@ -63,7 +65,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="33"
                 android:backgroundTint="#A6A6A6"
-                android:textSize="60sp" />
+                android:textSize="60sp"
+                android:freezesText="true"/>
 
             <Button
                 android:id="@+id/btnCampo_01"
@@ -72,7 +75,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="33"
                 android:backgroundTint="#A6A6A6"
-                android:textSize="60sp" />
+                android:textSize="60sp"
+                android:freezesText="true"/>
 
             <Button
                 android:id="@+id/btnCampo_02"
@@ -82,7 +86,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="33"
                 android:backgroundTint="#A6A6A6"
-                android:textSize="60sp" />
+                android:textSize="60sp"
+                android:freezesText="true"/>
 
         </TableRow>
 
@@ -97,7 +102,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="33"
                 android:backgroundTint="#A6A6A6"
-                android:textSize="60sp" />
+                android:textSize="60sp"
+                android:freezesText="true"/>
 
             <Button
                 android:id="@+id/btnCampo_11"
@@ -106,7 +112,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="33"
                 android:backgroundTint="#A6A6A6"
-                android:textSize="60sp" />
+                android:textSize="60sp"
+                android:freezesText="true"/>
 
             <Button
                 android:id="@+id/btnCampo_12"
@@ -116,7 +123,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="33"
                 android:backgroundTint="#A6A6A6"
-                android:textSize="60sp" />
+                android:textSize="60sp"
+                android:freezesText="true"/>
         </TableRow>
 
         <TableRow
@@ -130,7 +138,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="33"
                 android:backgroundTint="#A6A6A6"
-                android:textSize="60sp" />
+                android:textSize="60sp"
+                android:freezesText="true"/>
 
             <Button
                 android:id="@+id/btnCampo_21"
@@ -139,7 +148,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="33"
                 android:backgroundTint="#A6A6A6"
-                android:textSize="60sp" />
+                android:textSize="60sp"
+                android:freezesText="true"/>
 
             <Button
                 android:id="@+id/btnCampo_22"
@@ -149,7 +159,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="33"
                 android:backgroundTint="#A6A6A6"
-                android:textSize="60sp" />
+                android:textSize="60sp"
+                android:freezesText="true"/>
         </TableRow>
     </TableLayout>
 
@@ -165,6 +176,5 @@
         android:layout_weight="1">
 
     </LinearLayout>
-
 
 </LinearLayout>

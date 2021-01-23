@@ -1,5 +1,7 @@
 package com.carrabba.tris;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -148,5 +150,25 @@ public class GiocoActivity extends AppCompatActivity implements View.OnClickList
         puntiGiocatore2 = 0;
         aggiornamentoPunti();
         resetBoard();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@Nullable Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("contatoreRound", contatoreRound);
+        outState.putInt("Puntigiocatore1", puntiGiocatore1);
+        outState.putInt("puntiGiocatore2", puntiGiocatore2);
+        outState.putBoolean("turnoGiocatore1", turnoGiocatore1);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        contatoreRound = savedInstanceState.getInt("contatoreRound");
+        puntiGiocatore1 = savedInstanceState.getInt("puntiGiocatore1");
+        puntiGiocatore2 = savedInstanceState.getInt("puntiGiocatore2");
+        turnoGiocatore1 = savedInstanceState.getBoolean("turnoGiocatore1");
     }
 }
