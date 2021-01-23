@@ -57,7 +57,7 @@
             android:weightSum="100">
 
             <Button
-                android:id="@+id/btnCampo00"
+                android:id="@+id/btnCampo_00"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_marginLeft="10dp"
@@ -66,7 +66,7 @@
                 android:textSize="60sp" />
 
             <Button
-                android:id="@+id/btnCampo01"
+                android:id="@+id/btnCampo_01"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
@@ -75,7 +75,7 @@
                 android:textSize="60sp" />
 
             <Button
-                android:id="@+id/btnCampo02"
+                android:id="@+id/btnCampo_02"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
@@ -91,7 +91,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btnCampo10"
+                android:id="@+id/btnCampo_10"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_marginLeft="10dp"
@@ -100,7 +100,7 @@
                 android:textSize="60sp" />
 
             <Button
-                android:id="@+id/btnCampo11"
+                android:id="@+id/btnCampo_11"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
@@ -109,7 +109,7 @@
                 android:textSize="60sp" />
 
             <Button
-                android:id="@+id/btnCampo12"
+                android:id="@+id/btnCampo_12"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
@@ -124,7 +124,7 @@
             android:layout_height="252dp">
 
             <Button
-                android:id="@+id/btnCampo20"
+                android:id="@+id/btnCampo_20"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_marginLeft="10dp"
@@ -133,7 +133,7 @@
                 android:textSize="60sp" />
 
             <Button
-                android:id="@+id/btnCampo21"
+                android:id="@+id/btnCampo_21"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
@@ -142,7 +142,7 @@
                 android:textSize="60sp" />
 
             <Button
-                android:id="@+id/btnCampo22"
+                android:id="@+id/btnCampo_22"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
