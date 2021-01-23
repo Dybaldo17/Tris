@@ -43,7 +43,7 @@ public class GiocoActivity extends AppCompatActivity implements View.OnClickList
         buttonReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                resetGame();
             }
         });
     }
@@ -141,5 +141,12 @@ public class GiocoActivity extends AppCompatActivity implements View.OnClickList
 
         contatoreRound = 0;
         turnoGiocatore1 = true;
+    }
+
+    private void resetGame() {
+        puntiGiocatore1 = 0;
+        puntiGiocatore2 = 0;
+        aggiornamentoPunti();
+        resetBoard();
     }
 }
