@@ -7,123 +7,162 @@
     android:orientation="vertical"
     tools:context=".GiocoActivity">
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtGiocatore1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Giocatore 1: 0"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="99dp"
+                android:layout_marginLeft="99dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:backgroundTint="#FF9800"
+                android:text="RESET" />
+        </TableRow>
+
+        <TableRow
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtGiocatore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giocatore 2: 0"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="7dp"
+            android:gravity="center_horizontal"
+            android:weightSum="100">
+
+            <Button
+                android:id="@+id/btnCampo00"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="33"
+                android:backgroundTint="#A6A6A6"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/btnCampo01"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="33"
+                android:backgroundTint="#A6A6A6"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/btnCampo02"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="33"
+                android:backgroundTint="#A6A6A6"
+                android:textSize="60sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnCampo10"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="33"
+                android:backgroundTint="#A6A6A6"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/btnCampo11"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="33"
+                android:backgroundTint="#A6A6A6"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/btnCampo12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="33"
+                android:backgroundTint="#A6A6A6"
+                android:textSize="60sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="252dp">
+
+            <Button
+                android:id="@+id/btnCampo20"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="33"
+                android:backgroundTint="#A6A6A6"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/btnCampo21"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="33"
+                android:backgroundTint="#A6A6A6"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/btnCampo22"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="33"
+                android:backgroundTint="#A6A6A6"
+                android:textSize="60sp" />
+        </TableRow>
+    </TableLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/txtGiocatore1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Giocatore 1: 0"
-            android:textSize="30sp"/>
-
-        <TextView
-            android:id="@+id/txtGiocatore2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtGiocatore1"
-            android:text="Giocatore 2: 0"
-            android:textSize="30sp"/>
-
-        <Button
-            android:id="@+id/btnReset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="99dp"
-            android:layout_marginLeft="99dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
-            android:layout_toEndOf="@+id/txtGiocatore2"
-            android:layout_toRightOf="@+id/txtGiocatore2"
-            android:text="RESET" />
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-
-        <Button
-            android:id="@+id/btnCampo00"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp"/>
-
-        <Button
-            android:id="@+id/btnCampo01"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp"/>
-
-        <Button
-            android:id="@+id/btnCampo02"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <Button
-            android:id="@+id/btnCampo10"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp"/>
-
-        <Button
-            android:id="@+id/btnCampo11"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp"/>
-
-        <Button
-            android:id="@+id/btnCampo12"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <Button
-            android:id="@+id/btnCampo20"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp"/>
-
-        <Button
-            android:id="@+id/btnCampo21"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp"/>
-
-        <Button
-            android:id="@+id/btnCampo22"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp"/>
 
     </LinearLayout>
 
