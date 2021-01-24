@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "977057597042",
+    "project_id": "tris-a91de",
+    "storage_bucket": "tris-a91de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977057597042:android:528b8f645c7f16fcada4eb",
+        "android_client_info": {
+          "package_name": "com.carrabba.tris"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977057597042-2omi37g9drre25vvemf5v0g3pki3f4us.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxYIeVgOreqLEAdKyPzrCclTJhABn2CZk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977057597042-2omi37g9drre25vvemf5v0g3pki3f4us.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
