@@ -1,32 +1,91 @@
 package com.carrabba.tris;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Registrazione extends AppCompatActivity {
 
-    private Button button;
+    EditText nome;
+    EditText cognome;
+    EditText email;
+    EditText password;
+    Button registrazione;
+    TextView login;
+    ProgressBar progressBar;
+    FirebaseAuth database;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registrazione);
 
-        button = findViewById(R.id.btnLogin);
-        button.setOnClickListener(new View.OnClickListener() {
+        nome = findViewById(R.id.txtNome);
+        cognome = findViewById(R.id.txtCognome);
+        email = findViewById(R.id.txtEmail);
+        password = findViewById(R.id.txtPassword);
+        registrazione = findViewById(R.id.btnRegistrazione);
+        login = findViewById(R.id.txtRegistrato);
+
+        database = FirebaseAuth.getInstance();
+        progressBar = findViewById(R.id.progressBar);
+
+        if(database.getCurrentUser() != null) {
+            startActivity(new Intent(getApplicationContext(), GiocoActivity.class));
+            finish();
+        }
+
+        registrazione.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                apriGioco();
+                String txtEmail = email.getText().toString().trim();
+                String txtPassword = password.getText().toString().trim();
+
+                if (TextUtils.isEmpty(txtEmail)) {
+                    email.setError("Email obbligatoria");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(txtPassword)) {
+                    password.setError("Password obbligatoria");
+                    return;
+                }
+
+                if (txtPassword.length() < 6) {
+                    password.setError("La password deve essere di almeno 6 caraterri");
+                    return;
+                }
+
+                progressBar.setVisibility(View.VISIBLE);
+
+                database.createUserWithEmailAndPassword(txtEmail, txtPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(Registrazione.this, "Utente creato", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), GiocoActivity.class));
+                        } else {
+                            Toast.makeText(Registrazione.this, "Errore!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                })
             }
         });
     }
 
-    public void apriGioco() {
-        Intent intent = new Intent(this, GiocoActivity.class);
-        startActivity(intent);
-    }
 }
