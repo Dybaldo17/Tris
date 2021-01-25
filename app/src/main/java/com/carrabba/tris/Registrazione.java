@@ -83,7 +83,7 @@ public class Registrazione extends AppCompatActivity {
                             Toast.makeText(Registrazione.this, "Errore!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
-                })
+                });
             }
         });
     }
