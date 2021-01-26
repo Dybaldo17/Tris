@@ -20,9 +20,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:freezesText="true"
                 android:text="Giocatore 1: 0"
-                android:textSize="30sp"
-                android:freezesText="true"/>
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btnReset"
@@ -30,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="99dp"
                 android:layout_marginLeft="99dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="32dp"
                 android:layout_marginRight="32dp"
                 android:backgroundTint="#FF9800"
@@ -46,9 +47,24 @@
                 android:id="@+id/txtGiocatore2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:freezesText="true"
                 android:text="Giocatore 2: 0"
-                android:textSize="30sp"
-                android:freezesText="true"/>
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="99dp"
+                android:layout_marginLeft="99dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:backgroundTint="#FF9800"
+                android:text="LOGOUT" />
+
         </TableRow>
 
         <TableRow
