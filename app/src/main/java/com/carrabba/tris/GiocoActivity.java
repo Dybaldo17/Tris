@@ -4,11 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class GiocoActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -170,5 +173,11 @@ public class GiocoActivity extends AppCompatActivity implements View.OnClickList
         puntiGiocatore1 = savedInstanceState.getInt("puntiGiocatore1");
         puntiGiocatore2 = savedInstanceState.getInt("puntiGiocatore2");
         turnoGiocatore1 = savedInstanceState.getBoolean("turnoGiocatore1");
+    }
+
+    public void logout(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(), Login.class));
+        finish();
     }
 }
