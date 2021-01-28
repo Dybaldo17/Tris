@@ -23,7 +23,7 @@ public class Login extends AppCompatActivity {
     EditText email;
     EditText password;
     ProgressBar progressBar;
-    FirebaseAuth database;
+    FirebaseAuth mAuth;
     Button login;
 
     @Override
@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity {
         email = findViewById(R.id.txtEmail);
         password = findViewById(R.id.txtPassword);
         progressBar = findViewById(R.id.progressBar);
-        database = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
         login = findViewById(R.id.btnRegistrazione);
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +60,7 @@ public class Login extends AppCompatActivity {
 
                 progressBar.setVisibility(View.VISIBLE);
 
-                database.signInWithEmailAndPassword(txtEmail, txtPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                mAuth.signInWithEmailAndPassword(txtEmail, txtPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {

@@ -27,7 +27,7 @@ public class Registrazione extends AppCompatActivity {
     Button registrazione;
     TextView login;
     ProgressBar progressBar;
-    FirebaseAuth database;
+    FirebaseAuth mAuth;
 
 
     @Override
@@ -42,10 +42,10 @@ public class Registrazione extends AppCompatActivity {
         registrazione = findViewById(R.id.btnRegistrazione);
         login = findViewById(R.id.txtRegistrato);
 
-        database = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
 
-        if(database.getCurrentUser() != null) {
+        if(mAuth.getCurrentUser() != null) {
             startActivity(new Intent(getApplicationContext(), GiocoActivity.class));
             finish();
         }
@@ -73,7 +73,7 @@ public class Registrazione extends AppCompatActivity {
 
                 progressBar.setVisibility(View.VISIBLE);
 
-                database.createUserWithEmailAndPassword(txtEmail, txtPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                mAuth.createUserWithEmailAndPassword(txtEmail, txtPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
