@@ -81,9 +81,17 @@ public class Registrazione extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(), GiocoActivity.class));
                         } else {
                             Toast.makeText(Registrazione.this, "Errore!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            progressBar.setVisibility(View.GONE);
                         }
                     }
                 });
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Login.class));
             }
         });
     }
