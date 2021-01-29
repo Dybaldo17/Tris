@@ -96,7 +96,7 @@ public class Login extends AppCompatActivity {
                         mAuth.sendPasswordResetEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(Login.this, "Link per resettare la email", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this, "Link per resettare la email inviato", Toast.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
