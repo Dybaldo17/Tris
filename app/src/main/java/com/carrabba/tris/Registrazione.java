@@ -20,20 +20,21 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Registrazione extends AppCompatActivity {
 
-    EditText nome;
-    EditText cognome;
-    EditText email;
-    EditText password;
-    Button registrazione;
-    TextView login;
-    ProgressBar progressBar;
-    FirebaseAuth mAuth;
-
+    private EditText nome;
+    private EditText cognome;
+    private EditText email;
+    private EditText password;
+    private Button registrazione;
+    private TextView login;
+    private ProgressBar progressBar;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registrazione);
+
+        mAuth = FirebaseAuth.getInstance();
 
         nome = findViewById(R.id.txtNome);
         cognome = findViewById(R.id.txtCognome);
