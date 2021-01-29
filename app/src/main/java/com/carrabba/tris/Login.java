@@ -103,7 +103,7 @@ public class Login extends AppCompatActivity {
                             public void onFailure(@NonNull Exception e) {
                                 Toast.makeText(Login.this, "Errore! Link non inviato" + e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
-                        })
+                        });
                     }
                 });
 
