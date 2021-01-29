@@ -16,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class GiocoActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button[][] buttons = new Button[3][3];
+    private Button logout;
 
     private boolean turnoGiocatore1 = true;
 
@@ -34,6 +35,7 @@ public class GiocoActivity extends AppCompatActivity implements View.OnClickList
 
         txtPlayer1 = findViewById(R.id.txtGiocatore1);
         txtPlayer2 = findViewById(R.id.txtGiocatore2);
+        logout = findViewById(R.id.btnLogout);
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -175,7 +177,7 @@ public class GiocoActivity extends AppCompatActivity implements View.OnClickList
         turnoGiocatore1 = savedInstanceState.getBoolean("turnoGiocatore1");
     }
 
-    public void logout(View view) {
+    public void esci(View view) {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(getApplicationContext(), Login.class));
         finish();
