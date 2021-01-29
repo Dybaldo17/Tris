@@ -115,20 +115,20 @@ public class GiocoActivity extends AppCompatActivity implements View.OnClickList
 
     private void giocatore1Win() {
         puntiGiocatore1++;
-        Toast.makeText(this, "Giocatore 1 ha vinto!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(GiocoActivity.this, "Giocatore 1 ha vinto!", Toast.LENGTH_SHORT).show();
         aggiornamentoPunti();
         resetBoard();
     }
 
     private void giocatore2Win() {
         puntiGiocatore2++;
-        Toast.makeText(this, "Giocatore 2 ha vinto!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(GiocoActivity.this, "Giocatore 2 ha vinto!", Toast.LENGTH_SHORT).show();
         aggiornamentoPunti();
         resetBoard();
     }
 
     private void pareggio() {
-        Toast.makeText(this, "Pareggio!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(GiocoActivity.this, "Pareggio!", Toast.LENGTH_SHORT).show();
         resetBoard();
     }
 
