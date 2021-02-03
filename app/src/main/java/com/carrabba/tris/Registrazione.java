@@ -47,7 +47,7 @@ public class Registrazione extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
 
         if(mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), GiocoActivity.class));
+            startActivity(new Intent(getApplicationContext(), Login.class));
             finish();
         }
 
@@ -79,7 +79,7 @@ public class Registrazione extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(Registrazione.this, "Utente creato", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), GiocoActivity.class));
+                            startActivity(new Intent(getApplicationContext(), Login.class));
                         } else {
                             Toast.makeText(Registrazione.this, "Errore!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
