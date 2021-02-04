@@ -80,7 +80,6 @@ public class Registrazione extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(Registrazione.this, "Utente creato", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), GiocoActivity.class));
-                            finish();
                         } else {
                             Toast.makeText(Registrazione.this, "Errore!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
@@ -94,7 +93,6 @@ public class Registrazione extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), Login.class));
-                finish();
             }
         });
     }
