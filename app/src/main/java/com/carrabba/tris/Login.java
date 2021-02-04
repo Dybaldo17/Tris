@@ -72,6 +72,7 @@ public class Login extends AppCompatActivity {
                         if(task.isSuccessful()) {
                             Toast.makeText(Login.this, "Utente loggato", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), GiocoActivity.class));
+                            finish();
                         }else {
                             Toast.makeText(Login.this, "Errore!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
